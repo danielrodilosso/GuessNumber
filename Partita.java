@@ -59,24 +59,14 @@ public class Partita {
     public int controlloTentativo() {
     	int risultato = controlloTerminePartita();
     	
-    	if(controlloTerminePartita() == 2) {
     	//Significa che NON abbiamo raggiunto il numero Massimo di tentativi o non è stato
     	//trovato il numero segreto e quindi si è perso
+    	if(controlloTerminePartita() == 2) {
     		
     		if(this.rangeCorretto(tentativoGiocatore) == false){
-				/*
-			 * if(tentativoGiocatore == segreto || tentativiFatti == T_MAX) { inGioco =
-			 * false; }
-			 */
-    		
     			return 4;
     		}
     	
-			/*
-		 	* if(tentativoGiocatore == segreto) { inGioco = false; return 0; }
-		 	* 
-		 	* if(tentativiFatti == T_MAX) { inGioco = false; return 1; }
-		 	*/
     		if(tentativoGiocatore < segreto) {
     			return 2;
     		}else {
@@ -107,6 +97,5 @@ public class Partita {
     public void setInGioco(final boolean inGioco) {
     	this.inGioco = inGioco;
     }
-    
-   
+     
 }
